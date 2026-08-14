@@ -1,9 +1,14 @@
+import BillingToggle from "./components/BillingToggle"
+import type { BillingCycle } from "./types"
+import { useState } from "react"
+
 function App() {
 
+  const [cycle, setCycle] = useState<BillingCycle>("monthly");
   return (
     <>
-      <div className="bg-slate-900 min-h-screen text-white">Hello SaaS</div>
-    </>
+      <BillingToggle cycle={cycle} onChange={setCycle}/>
+   </>
   )
 }
 
