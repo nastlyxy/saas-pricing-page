@@ -46,17 +46,17 @@ src/
 
 To run this project locally:
 
-# 1. Clone the repository:
+### 1. Clone the repository:
 ```Bash
 git clone [https://github.com/nastlyxy/saas-pricing-page.git](https://github.com/nastlyxy/saas-pricing-page.git)
 cd saas-pricing-page
 ```
-# 2. Install dependencies:
+### 2. Install dependencies:
 ```Bash
 npm install
 ```
-# 3. Start the development server:
+### 3. Start the development server:
 ```Bash
 npm run dev
 ```
-# 4. Open your browser and navigate to http://localhost:5173
+### 4. Open your browser and navigate to http://localhost:5173
