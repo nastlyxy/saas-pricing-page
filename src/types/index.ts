@@ -8,4 +8,5 @@ export interface PricingPlan{
     monthlyPrice: number,
     annualDiscount?: number,
     features: Feature[],
+    isPopular?: boolean,
 }

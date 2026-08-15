@@ -26,6 +26,7 @@ export const plans: PricingPlan[] = [
       { name: "Team Collaboration", isIncluded: false },
       { name: "API Access", isIncluded: false },
     ],
+    isPopular: true,
   },
   {
     title: "Enterprise",

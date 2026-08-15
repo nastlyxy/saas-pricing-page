@@ -18,8 +18,13 @@ export default function PricingCard({ plan, cycle }: PricingCardProps) {
   }
 
   return (
-    <div className="flex flex-col bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
-      <div className="text-2xl font-semibold text-slate-900 dark:text-white">{plan.title}</div>
+    <div
+      className={`flex flex-col relative bg-white dark:bg-slate-800 rounded-xl p-8 border ${plan.isPopular ? "border-sky-500 shadow-lg shadow-sky-500/20" : "border-slate-200 dark:border-slate-700"}`}
+    >
+      {plan.isPopular && <p className="text-white bg-sky-500 text-sm font-bold py-1 px-2 rounded-full absolute top-3 right-3">Most Popular</p>}
+      <div className="text-2xl font-semibold text-slate-900 dark:text-white">
+        {plan.title}
+      </div>
       <div className="text-4xl font-bold mt-4 dark:text-white">
         {displayPrice}
         <span className="text-slate-400">
@@ -28,19 +33,24 @@ export default function PricingCard({ plan, cycle }: PricingCardProps) {
       </div>
       <ul className="mt-6 space-y-4">
         {plan.features.map((feature) => (
-          <li key={feature.name} className={feature.isIncluded? "text-slate-900 dark:text-white" : "text-slate-500"}>
-            <span
-              className={
-                feature.isIncluded ? "text-green-500" : ""
-              }
-            >
-              {feature.isIncluded? "✓ ": "✕ "}
+          <li
+            key={feature.name}
+            className={
+              feature.isIncluded
+                ? "text-slate-900 dark:text-white"
+                : "text-slate-500"
+            }
+          >
+            <span className={feature.isIncluded ? "text-green-500" : ""}>
+              {feature.isIncluded ? "✓ " : "✕ "}
             </span>
             {feature.name}
           </li>
         ))}
       </ul>
-      <button className="w-full mt-8 bg-sky-500 rounded-xl text-white py-3 font-semibold transition-colors hover:bg-sky-400">Get Started</button>
+      <button className="w-full mt-8 bg-sky-500 rounded-xl text-white py-3 font-semibold transition-colors hover:bg-sky-400">
+        Get Started
+      </button>
     </div>
   );
 }
