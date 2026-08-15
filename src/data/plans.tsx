@@ -6,7 +6,7 @@ export const plans: PricingPlan[] = [
     monthlyPrice: 10.99,
     annualDiscount: 10,
     features: [
-      { name: "analytics", isIncluded: true },
+      { name: "Analytics", isIncluded: true },
       { name: "Unlimited Projects", isIncluded: true },
       { name: "Priority Support", isIncluded: false },
       { name: "Custom Domain", isIncluded: false },
@@ -19,7 +19,7 @@ export const plans: PricingPlan[] = [
     monthlyPrice: 40.99,
     annualDiscount: 10,
     features: [
-      { name: "analytics", isIncluded: true },
+      { name: "Analytics", isIncluded: true },
       { name: "Unlimited Projects", isIncluded: true },
       { name: "Priority Support", isIncluded: true },
       { name: "Custom Domain", isIncluded: true },
@@ -33,7 +33,7 @@ export const plans: PricingPlan[] = [
     monthlyPrice: 100.99,
     annualDiscount: 10,
     features: [
-      { name: "analytics", isIncluded: true },
+      { name: "Analytics", isIncluded: true },
       { name: "Unlimited Projects", isIncluded: true },
       { name: "Priority Support", isIncluded: true },
       { name: "Custom Domain", isIncluded: true },
