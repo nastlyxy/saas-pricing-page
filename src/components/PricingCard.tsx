@@ -18,9 +18,9 @@ export default function PricingCard({ plan, cycle }: PricingCardProps) {
   }
 
   return (
-    <div className="flex flex-col bg-slate-800 rounded-xl p-8 border border-slate-700">
-      <div className="text-2xl font-semibold text-white">{plan.title}</div>
-      <div className="text-4xl font-bold mt-4">
+    <div className="flex flex-col bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
+      <div className="text-2xl font-semibold text-slate-900 dark:text-white">{plan.title}</div>
+      <div className="text-4xl font-bold mt-4 dark:text-white">
         {displayPrice}
         <span className="text-slate-400">
           {cycle === "monthly" ? "/mo" : "/yr"}
@@ -28,7 +28,7 @@ export default function PricingCard({ plan, cycle }: PricingCardProps) {
       </div>
       <ul className="mt-6 space-y-4">
         {plan.features.map((feature) => (
-          <li key={feature.name} className={feature.isIncluded? "text-white" : "text-slate-500"}>
+          <li key={feature.name} className={feature.isIncluded? "text-slate-900 dark:text-white" : "text-slate-500"}>
             <span
               className={
                 feature.isIncluded ? "text-green-500" : ""
